@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-primary-container: #4f46e5;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #e0e7ff;
+  --color-primary-fixed: #818cf8;
+  --color-primary-fixed-dim: #6366f1;
+  --color-on-primary-fixed: #050508;
+  --color-on-primary-fixed-variant: #312e81;
+
+  --color-secondary: #a855f7;
+  --color-secondary-container: #9333ea;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #f3e8ff;
+  --color-secondary-fixed: #c084fc;
+  --color-secondary-fixed-dim: #a855f7;
+  --color-on-secondary-fixed: #050508;
+  --color-on-secondary-fixed-variant: #581c87;
+
+  --color-tertiary: #06b6d4;
+  --color-tertiary-container: #0891b2;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #ecfeff;
+  --color-tertiary-fixed: #67e8f9;
+  --color-tertiary-fixed-dim: #22d3ee;
+  --color-on-tertiary-fixed: #050508;
+  --color-on-tertiary-fixed-variant: #164e63;
+
+  --color-surface: #050508;
+  --color-surface-dim: #090910;
+  --color-surface-bright: #141420;
+  --color-surface-container-lowest: rgba(255, 255, 255, 0.03);
+  --color-surface-container-low: rgba(255, 255, 255, 0.05);
+  --color-surface-container: rgba(255, 255, 255, 0.07);
+  --color-surface-container-high: rgba(255, 255, 255, 0.10);
+  --color-surface-container-highest: rgba(255, 255, 255, 0.14);
+  --color-on-surface: #f1f1f6;
+  --color-on-surface-variant: #9d9db3;
+  --color-outline: #686882;
+  --color-outline-variant: rgba(255, 255, 255, 0.08);
+  --color-error: #f87171;
+  --color-error-container: rgba(248, 113, 113, 0.15);
+  --color-on-error: #ffffff;
+  --color-on-error-container: #fca5a5;
+  --color-inverse-surface: #f1f1f6;
+  --color-inverse-on-surface: #050508;
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html, body {
+    background-color: #050508;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #e0e0e6;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Frosted Glass Core Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.glass-card-interactive {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(129, 140, 248, 0.3);
+}
+
+/* Active Nav with Left Glowing Accent */
+.active-nav {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #818cf8;
+}
+
+/* Background Glowing Ambient Gradients */
+.mesh-1 {
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 55%;
+  height: 55%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.22) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mesh-2 {
+  position: fixed;
+  bottom: -10%;
+  right: -10%;
+  width: 55%;
+  height: 55%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mesh-3 {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Hide scrollbars for slick mobile look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+

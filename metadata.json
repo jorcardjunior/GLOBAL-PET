@@ -1,0 +1,6 @@
+{
+  "name": "Global Pet - AgroRação Pro",
+  "description": "Sistema integrado de frente de caixa PDV, atendente virtual IA com RAG para WhatsApp e pedidos online, ração a granel, estética Pet Care, gestão remota, importação XML NF-e/PDF e financeiro.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
